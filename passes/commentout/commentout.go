@@ -30,7 +30,7 @@ func run(pass *analysis.Pass) (interface{}, error) {
 			}
 
 			if ok, n := isDebugComment(cg); ok && n == len(cg.List) {
-				pass.Reportf(cg.Pos(), "do not leave a comment outed debug code with out reason")
+				pass.Reportf(cg.Pos(), "do not leave a comment outed debug code without reason")
 			}
 		}
 	}

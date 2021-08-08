@@ -36,7 +36,7 @@ See: https://github.com/gostaticanalysis/builtinprint
 ```go
 package a
 
-//func f() { // want "do not leave a comment outed debug code with out reason"
+//func f() { // want "do not leave a comment outed debug code without reason"
 //	panic("not implement")
 //}
 
