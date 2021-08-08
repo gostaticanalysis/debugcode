@@ -5,7 +5,7 @@
 `debugcode` finds debug codes.
 
 * [builtinprint](https://github.com/gostaticanalysis/builtinprint): finds calling builtin `print` or `println`.
-* [commentout](./passes/commentout): finds a comment outed debug code without reason
+* [commentout](./passes/commentout): finds a commented out debug code without reason
 
 ## Install
 
@@ -31,12 +31,12 @@ See: https://github.com/gostaticanalysis/builtinprint
 
 ### commentout
 
-[commentout](./passes/commentout): finds a comment outed debug code without reason.
+[commentout](./passes/commentout): finds a commented out debug code without reason.
 
 ```go
 package a
 
-//func f() { // want "do not leave a comment outed debug code without reason"
+//func f() { // want "do not leave a commented out debug code without reason"
 //	panic("not implement")
 //}
 

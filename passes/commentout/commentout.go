@@ -11,7 +11,7 @@ import (
 	"golang.org/x/tools/go/ast/astutil"
 )
 
-const doc = "commentout finds a comment outed debug code without reason"
+const doc = "commentout finds a commented out debug code without reason"
 
 var Analyzer = &analysis.Analyzer{
 	Name: "commentout",
@@ -30,7 +30,7 @@ func run(pass *analysis.Pass) (interface{}, error) {
 			}
 
 			if ok, n := isDebugComment(cg); ok && n == len(cg.List) {
-				pass.Reportf(cg.Pos(), "do not leave a comment outed debug code without reason")
+				pass.Reportf(cg.Pos(), "do not leave a commented out debug code without reason")
 			}
 		}
 	}

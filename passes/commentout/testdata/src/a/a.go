@@ -1,6 +1,6 @@
 package a
 
-//func f() { // want "do not leave a comment outed debug code without reason"
+//func f() { // want "do not leave a commented out debug code without reason"
 //	panic("not implement")
 //}
 
@@ -19,7 +19,7 @@ var _ = struct{}{}
 
 // no reason
 
-//func f() { // want "do not leave a comment outed debug code without reason"
+//func f() { // want "do not leave a commented out debug code without reason"
 //	panic("not implement")
 //}
 
